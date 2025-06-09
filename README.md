@@ -20,6 +20,8 @@ rate4site -s GeneX.aa.aln -t hg38.100way.nh >out.res
 
 python seq_select.py -i Homo_sapiens.GRCh38.dna_sm.toplevel.fa -l coding.mutation.aa.sort.tsv.pylist -o gene.fasta --detail
 
+#5. Calculate raxmlHPC
+raxmlHPC -fe -t all58.nwk -m PROTGAMMAJTTX -s GeneX.raxml58.fa -n RAxML58
 
-#5. Correspond the rate4site sites in humans with cancer sites
+Correspond the rate4site sites in humans with cancer sites
 
