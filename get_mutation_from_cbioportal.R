@@ -486,53 +486,53 @@ list_generated_files <- function() {
 # 13. Execute main program --------------------------------------------------------------
 
 # Option 1: Test run (process first 10 studies)
-print("Starting test run (first 10 studies)...")
-test_result <- main(max_studies = 10, batch_size = 3)
+#print("Starting test run (first 10 studies)...")
+#test_result <- main(max_studies = 10, batch_size = 3)
 
 # Validate test results
-if (exists("test_result")) {
-    test_validation <- validate_results(test_result)
-    if (test_validation) {
-        print("Test run validation passed!")
-        list_generated_files()
-        
+#if (exists("test_result")) {
+#    test_validation <- validate_results(test_result)
+ #   if (test_validation) {
+ #       print("Test run validation passed!")
+ #       list_generated_files()
+#        
         # If test successful, ask whether to process all studies
-        cat("\nTest run successful! Continue processing all remaining studies? (y/n): ")
-        user_input <- readline()
-        
-        if (tolower(user_input) == "y") {
-            print("Starting to process all studies...")
-            final_result <- main(max_studies = NULL, batch_size = 5)
-            
-            if (exists("final_result")) {
-                final_validation <- validate_results(final_result)
-                if (final_validation) {
-                    print("All studies processed and validation passed!")
-                    list_generated_files()
-                } else {
-                    print("All studies processed but validation failed!")
-                }
-            }
-        } else {
-            print("Only test run completed, not processing all studies")
-        }
-    } else {
-        print("Test run validation failed!")
-    }
-}
+ #       cat("\nTest run successful! Continue processing all remaining studies? (y/n): ")
+  #      user_input <- readline()
+ #       
+#        if (tolower(user_input) == "y") {
+#            print("Starting to process all studies...")
+#            final_result <- main(max_studies = NULL, batch_size = 5)
+#            
+#            if (exists("final_result")) {
+#                final_validation <- validate_results(final_result)
+#                if (final_validation) {
+#                    print("All studies processed and validation passed!")
+#                    list_generated_files()
+#                } else {
+#                    print("All studies processed but validation failed!")
+#                }
+#            }
+#        } else {
+#            print("Only test run completed, not processing all studies")
+#        }
+#    } else {
+#        print("Test run validation failed!")
+#    }
+#}
 
 # Option 2: Directly process all studies (uncomment the following lines)
-# print("Starting to process all studies...")
-# final_result <- main(max_studies = NULL, batch_size = 5)
-# 
-# if (exists("final_result")) {
-#     final_validation <- validate_results(final_result)
-#     if (final_validation) {
-#         print("All studies processed and validation passed!")
-#         list_generated_files()
-#     } else {
-#         print("All studies processed but validation failed!")
-#     }
-# }
+print("Starting to process all studies...")
+final_result <- main(max_studies = NULL, batch_size = 5)
+
+if (exists("final_result")) {
+    final_validation <- validate_results(final_result)
+    if (final_validation) {
+        print("All studies processed and validation passed!")
+        list_generated_files()
+    } else {
+        print("All studies processed but validation failed!")
+    }
+}
 
 print("=== Program execution completed ===")
