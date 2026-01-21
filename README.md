@@ -1,6 +1,6 @@
 # Evolutionary Analysis of Cancer-Associated Loci in Mammals
 
-This repository contains the computational pipeline, statistical scripts, and visualization tools used to analyze the evolutionary conservation of cancer-associated mutation sites across 62 mammalian species.
+This repository contains the computational pipeline, statistical scripts, and visualization tools used to analyze the evolutionary conservation of cancer-associated mutation sites across mammalian species.
 
 ---
 
@@ -62,15 +62,15 @@ To evaluate the functional importance of human cancer-associated sites, two comp
 * Validation: Mapped positions were cross-referenced with cBioPortal data.
 * Result: 86.8% overlap with cBioPortal and 69.5% retention from COSMIC after rigorous filtering.
 
-## 7. Step 7: Intersection Analysis of Epigenetic Modifications and Cancer Sites
+### Step 7: Intersection Analysis of Epigenetic Modifications and Cancer Sites
 
 This section describes the integration of DNA 5mC and RNA m6A modification data with human-centric cancer mutation sites across 21 mammalian species.
 
-### 7.1 Homology Mapping of Cancer Sites
+#### 7.1 Homology Mapping of Cancer Sites
 * **Objective**: To identify homologous positions of human cancer-associated sites in 20 other mammalian species (21 species total).
 * **Tool**: **Clustal Omega** was utilized to perform multi-species sequence alignment and precise coordinate mapping.
 
-### 7.2 Coordinate Transformation (BED Mapping)
+#### 7.2 Coordinate Transformation (BED Mapping)
 To intersect multi-species modification data (5mC/m6A) with human cancer sites, non-human genomic coordinates were converted into human-equivalent coordinates (GRCh38/hg38).
 * **Script**: `map_species_to_human_bed.py` (formerly `A_to_human_bed.py`)
 * **Function**: This script transforms species-specific BED files into human-reference BED format based on orthologous mapping, facilitating cross-species genomic comparisons.
@@ -87,8 +87,9 @@ The following list maps the scripts to the corresponding figures in the manuscri
 * Figure 1: plot_age_of_cancer_sample.r - Shows the age distribution of cancer samples.
 * Figure 1: plot_Transition_transversion_ratio.r - Calculates and plots the Ti/Tv ratio.
 * Figure 1: plot_Rratio.py - Distribution of R-ratio scores.
-* Figure 1 & 2: box.r - Boxplots comparing conservation scores across groups.
+* Figure all: box.r - Boxplots comparing conservation scores across groups.
 * Figure 3: plot_polysel.r - Visualizes PolySel enrichment results.
+* Figure 1-4: The source data for the boxplots in Figures 1–4 are all stored in the data folder.
 * Statistics: PGLS_cancerRisk.R - Phylogenetic Generalized Least Squares (PGLS) analysis for cancer risk vs. lifespan.
 * Supplementary: tissue_site_distribution.r - Pie chart for tissue-specific cancer site distribution.
 
