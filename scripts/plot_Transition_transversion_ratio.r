@@ -1,0 +1,5 @@
+library(ggplot2)
+library(reshape2)
+mydata<-read.csv("./data/Transition_transversion.ratio",sep="\t",na.strings="NA",stringsAsFactors=FALSE)
+p <- ggplot(mydata, aes(ratio,tissue)) + geom_segment(aes(x=0,                    xend=ratio,y=tissue,yend=tissue))+   geom_point(shape=21,size=3,colour="black",fill="#FC4E07")+theme(panel.background = element_blank(),panel.border = element_blank(),panel.grid.major = element_blank(),axis.line = element_line(colour = "black",size = 1.5,linetype = 1),axis.ticks = element_line(colour = "black",size = 1.5,linetype = 1),axis.ticks.length = unit(3,"mm"),axis.title.x = element_text(size = 16),axis.title.y = element_text(size = 16),axis.text.x = element_text(size = 14,color="black"),axis.text.y = element_text(size = 14,color="black"))
+ggsave(p, file='Transition_transversion.ratio.pdf', width=6, height=8)
