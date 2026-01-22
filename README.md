@@ -68,7 +68,7 @@ To evaluate the functional importance of human cancer-associated sites, two comp
 This section describes the integration of DNA 5mC and RNA m6A modification data with human-centric cancer mutation sites across 21 mammalian species.
 
 #### 7.1 Homology Mapping of Cancer Sites
-* **Objective**: To identify homologous positions of human cancer-associated sites in 20 other mammalian species (21 species total).
+* **Objective**: To identify homologous positions of human cancer-associated sites in 21 mammalian species.
 * **Tool**: **Clustal Omega** was utilized to perform multi-species sequence alignment and precise coordinate mapping.
 
 #### 7.2 Coordinate Transformation (BED Mapping)
