@@ -18,8 +18,9 @@ This repository contains the computational pipeline, statistical scripts, and vi
 
 ### Genomic Resources
 * Multiple Sequence Alignment (MSA): 62 mammalian species alignments were obtained from the UCSC Genome Browser (hg38 100-way).
+   http://hgdownload.soe.ucsc.edu/goldenPath/hg38/multiz100way/
 * Reference Genome: Homo sapiens (GRCh38/hg38).
-  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/multiz100way/
+ 
 
 ---
 
