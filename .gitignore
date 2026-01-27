@@ -1,6 +1,0 @@
-# 忽略数据文件夹
-data/5mc_meth/
-data/m6A_meth/
-# 或者忽略所有大文件后缀
-*.csv
-*.site_proba
